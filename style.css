@@ -4,6 +4,10 @@
   font-family: 'Courier New', Courier, monospace;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   background-color: #f2f2f2;
 }
@@ -12,7 +16,7 @@ a {
   text-decoration: none;
 }
 
-p {
+p, h1, h2, h3 {
   cursor: default;
 }
 
@@ -21,6 +25,9 @@ p {
   width: 100%;
   height: 4rem;
   display: flex;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
 }
 
 .logo {
@@ -113,9 +120,13 @@ p {
   border: 3px solid black;
 }
 
+.container h2 {
+  font-family: "Audiowide", sans-serif;
+}
+
 .content {
   width: 100%;
-  height: 680px;
+  height: 600px;
 }
 
 .overview {
@@ -164,7 +175,6 @@ p {
   padding: 5px 25px;
   border-radius: 25px;
   color: #e73c35;
-  font-family: "Audiowide", sans-serif;
 }
 
 .p1 {
@@ -197,4 +207,38 @@ p {
 
 .p2 p {
   text-align: right;
+}
+
+.contact {
+  max-width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  height: 350px;
+}
+
+.me {
+  margin-bottom: 1rem;
+}
+
+.contact-item {
+  height: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+
+.bar {
+  display: flex;
+  flex-direction: row;
+  margin: 15px;
+}
+
+.icon img {
+  width: 35px;
+}
+
+.icon-name {
+  display: flex;
+  align-items: center;
 }

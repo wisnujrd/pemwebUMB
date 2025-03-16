@@ -20,7 +20,7 @@
           target="_blank"
           >Download CV</a
         >
-        <a href="contact.html">Contact</a>
+        <a href="#contact">Contact</a>
         <a href="aboutme.html">About Me</a>
       </div>
     </div>
@@ -75,6 +75,41 @@
           </table>
         </div>
       </div>
+      <div class="contact" id="contact">
+        <div class="me"><h2>My Contact</h2></div>
+        <div class="contact-item">
+          <div class="bar">
+            <div class="icon">
+              <img src="img/icon/ig.png" alt="instagram" />
+            </div>
+            <div class="icon-name"><p>@wisnu_jrd</p></div>
+          </div>
+          <div class="bar">
+            <div class="icon">
+              <img src="img/icon/contact.png" alt="contact" />
+            </div>
+            <div class="icon-name"><p>0813-3456-8624</p></div>
+          </div>
+          <div class="bar">
+            <div class="icon"><img src="img/icon/email.png" alt="email" /></div>
+            <div class="icon-name"><p>wisnujarodi2@gmail.com</p></div>
+          </div>
+        </div>
+      </div>
     </div>
   </body>
 </html>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    let menuItems = document.querySelectorAll(".item a");
+
+    menuItems.forEach(function (item) {
+      item.addEventListener("click", function () {
+        menuItems.forEach((menu) => menu.classList.remove("active"));
+
+        this.classList.add("active");
+      });
+    });
+  });
+</script>
